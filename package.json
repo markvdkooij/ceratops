@@ -1,0 +1,9 @@
+{
+	"name": "ceratops",
+	"version": "0.1.0",
+	"description": "CSS framework designed to use for every web project.",
+	"main": "ceratops.scss",
+	"repository": "https://github.com/markvdkooij/ceratops.git",
+	"author": "Mark van der Kooij <22347310+markvdkooij@users.noreply.github.com>",
+	"license": "MIT"
+}
