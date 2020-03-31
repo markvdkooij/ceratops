@@ -1,0 +1,27 @@
+@mixin block() {
+	padding: $padding;
+	background-color: $color-background;
+}
+
+pre {
+	@include block();
+
+	overflow: auto;
+	white-space: pre;
+	word-wrap: normal;
+}
+
+blockquote {
+	@include block();
+}
+
+code {
+	@include block();
+}
+
+hr {
+	height: 2px;
+
+	background-color: $color-background;
+	border: none;
+}

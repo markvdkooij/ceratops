@@ -1,0 +1,44 @@
+* {
+	box-sizing: border-box;
+	outline: none;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+html {
+	font-size: $body-font-size;
+}
+
+body {
+	font-size: 1rem;
+	line-height: $body-line-height;
+	font-weight: $body-font-weight;
+	font-family: $body-font-family;
+
+	color: $color-body;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hgroup,
+ul,
+ol,
+dl,
+p,
+figure,
+pre,
+table,
+fieldset,
+blockquote,
+code,
+hr {
+	margin-top: 0; // prevent margins from collapsing
+	margin-bottom: $margin-bottom;
+}

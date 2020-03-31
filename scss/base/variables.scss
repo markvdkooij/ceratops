@@ -1,0 +1,62 @@
+// typography
+
+$body-font-size: 16px !default;
+$body-line-height: 1.6 !default;
+$body-font-weight: 400 !default;
+$body-font-family: Arial, Helvetica, sans-serif !default;
+
+$header-line-height: 1.4 !default;
+$header-font-weight: 700 !default;
+$header-font-family: Arial, Helvetica, sans-serif !default;
+
+$header-h1-font-size: 2.6rem !default;
+$header-h2-font-size: 2.2rem !default;
+$header-h3-font-size: 1.8rem !default;
+$header-h4-font-size: 1.6rem !default;
+$header-h5-font-size: 1.4rem !default;
+$header-h6-font-size: 1.2rem !default;
+
+// spacers
+
+$margin-top: 1rem !default;
+$margin-right: 1rem !default;
+$margin-bottom: 1rem !default;
+$margin-left: 1rem !default;
+$margin: 1rem !default;
+
+$padding-top: 1rem !default;
+$padding-right: 1rem !default;
+$padding-bottom: 1rem !default;
+$padding-left: 1rem !default;
+$padding: 1rem !default;
+
+// columns
+
+$column-gap: 1rem !default;
+
+// colors
+
+$color-body: #2a2a2a !default;
+$color-header: #2a2a2a !default;
+$color-background: #f2f2f2 !default;
+
+$color-primary: red !default;
+$color-secondary: green !default;
+$color-tertiary: blue !default;
+
+// media queries
+
+$desktop: 1201px !default; // on desktop or larger (min-width)
+$desktop-max: 1200px !default; // on desktop or smaller (max-width)
+
+$tablet-landscape: 1025px !default; // on tablet landscape or larger (min-width)
+$tablet-landscape-max: 1024px !default; // on tablet landscape or smaller (max-width)
+
+$tablet-portrait: 769px !default; // on tablet portrait or larger (min-width)
+$tablet-portrait-max: 768px !default; // on tablet portrait or smaller (max-width)
+
+$phone-landscape: 681px !default; // on phone landscape or larger (min-width)
+$phone-landscape-max: 680px !default; // on phone landscape or smaller (max-width)
+
+$phone-portrait: 481px !default; // on phone portait or larger (min-width)
+$phone-portrait-max: 480px !default; // on phone portait or smaller (max-width)
