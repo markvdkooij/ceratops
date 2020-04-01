@@ -1,0 +1,28 @@
+@mixin block() {
+	padding: $padding #{$padding * 1.25};
+	background-color: $color-background-fill;
+	border-radius: $radius;
+}
+
+pre {
+	@include block();
+
+	overflow: auto;
+	white-space: pre;
+	word-wrap: normal;
+}
+
+blockquote {
+	@include block();
+}
+
+code {
+	@include block();
+}
+
+hr {
+	height: 2px;
+
+	background-color: $color-background-fill;
+	border: none;
+}

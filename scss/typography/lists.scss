@@ -1,0 +1,23 @@
+@mixin list() {
+	margin-left: #{$margin * 1.25};
+
+	list-style-position: outside;
+}
+
+ul {
+	@include list();
+
+	list-style-type: disc;
+}
+
+ol {
+	@include list();
+
+	list-style-type: decimal;
+}
+
+dl {
+	dd {
+		margin-left: $margin;
+	}
+}

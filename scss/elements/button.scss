@@ -1,0 +1,103 @@
+// mixins
+
+@mixin button-style-regular($color-text, $color-background, $color-border) {
+	color: $color-text;
+	background-color: $color-background;
+	border-color: $color-border;
+
+	&:visited {
+		color: $color-text;
+		background-color: $color-background;
+		border-color: $color-border;
+	}
+
+	&:hover {
+		color: $color-text;
+		background-color: darken($color-background, 5);
+		border-color: darken($color-border, 5);
+	}
+
+	&:active,
+	&:focus {
+		color: $color-text;
+		background-color: darken($color-background, 10);
+		border-color: darken($color-border, 10);
+	}
+}
+
+@mixin button-style-inverted($color-text, $color-background, $color-border) {
+	color: $color-background;
+	background-color: $color-text;
+	border-color: $color-border;
+
+	&:visited {
+		color: $color-background;
+		background-color: $color-text;
+		border-color: $color-border;
+	}
+
+	&:hover {
+		color: $color-background;
+		background-color: darken($color-text, 3);
+		border-color: $color-border;
+	}
+
+	&:active,
+	&:focus {
+		color: $color-background;
+		background-color: darken($color-text, 6);
+		border-color: $color-border;
+	}
+}
+
+// button
+
+.button {
+	display: inline-block;
+
+	width: auto;
+	height: auto;
+
+	padding: #{$padding / 2} $padding;
+
+	font-size: $body-font-size;
+	line-height: $body-line-height;
+	font-weight: $header-font-weight;
+	font-family: $body-font-family;
+
+	text-align: center;
+	text-decoration: none;
+	vertical-align: baseline;
+
+	outline: none;
+	border: 2px solid transparent;
+	border-radius: $radius;
+
+	cursor: pointer;
+
+	@include button-style-regular($color-body, $color-background-fill, $color-background-fill);
+
+	&--primary {
+		@include button-style-regular(#fff, $color-primary, $color-primary);
+
+		&--inverted {
+			@include button-style-inverted(#fff, $color-primary, $color-primary);
+		}
+	}
+
+	&--secondary {
+		@include button-style-regular(#fff, $color-secondary, $color-secondary);
+
+		&--inverted {
+			@include button-style-inverted(#fff, $color-secondary, $color-secondary);
+		}
+	}
+
+	&--tertiary {
+		@include button-style-regular(#fff, $color-tertiary, $color-tertiary);
+
+		&--inverted {
+			@include button-style-inverted(#fff, $color-tertiary, $color-tertiary);
+		}
+	}
+}

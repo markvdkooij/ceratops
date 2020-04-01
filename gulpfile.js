@@ -13,12 +13,12 @@ const sourcemaps = require('gulp-sourcemaps');
 
 // exports
 
-exports.watch = gulp.series(compile, watcher);
+exports.watch = gulp.series(compile, watching);
 exports.build = gulp.series(compile, minify);
 
-// watcher
+// watching
 
-function watcher() {
+function watching() {
 	gulp.watch('./scss/**/*.scss', gulp.series(compile));
 }
 

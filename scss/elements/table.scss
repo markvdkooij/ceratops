@@ -1,0 +1,20 @@
+table {
+	tr {
+		th,
+		td {
+			padding: #{$padding / 2} $padding;
+			border: 1px solid $color-border;
+			text-align: left;
+		}
+
+		th {
+			background-color: $color-background-fill;
+			font-weight: $header-font-weight;
+			vertical-align: middle;
+		}
+
+		td {
+			vertical-align: top;
+		}
+	}
+}
