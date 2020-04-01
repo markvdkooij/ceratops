@@ -1,86 +1,5 @@
 /*! ceratops v0.1.0 | MIT License | github.com/markvdkooij/ceratops */
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-main,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+* {
   margin: 0;
   padding: 0;
   border: 0;
@@ -165,18 +84,18 @@ hr {
   margin-bottom: 1rem; }
 
 pre {
-  padding: 1rem;
+  padding: 1rem 1.25rem;
   background-color: #f2f2f2;
   overflow: auto;
   white-space: pre;
   word-wrap: normal; }
 
 blockquote {
-  padding: 1rem;
+  padding: 1rem 1.25rem;
   background-color: #f2f2f2; }
 
 code {
-  padding: 1rem;
+  padding: 1rem 1.25rem;
   background-color: #f2f2f2; }
 
 hr {
@@ -251,23 +170,153 @@ dl dd {
     .container {
       max-width: 1140px; } }
 
-.columns {
-  margin-top: -1rem;
-  margin-right: -1rem;
-  margin-left: -1rem; }
+.flex {
+  margin-top: -0.5rem;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem; }
+  .flex:not(:last-child) {
+    margin-bottom: 0.5rem; }
+  .flex:last-child {
+    margin-bottom: -0.5rem; }
   @media screen and (min-width: 769px) {
-    .columns {
+    .flex {
       display: flex; } }
-  .columns:not(:last-child) {
-    margin-bottom: 1rem; }
-  .columns:last-child {
-    margin-bottom: -1rem; }
 
-.column {
+.flex > .column {
   display: block;
-  flex-basis: 0;
-  flex-grow: 1;
-  flex-shrink: 1;
-  padding: 1rem; }
+  padding: 0.5rem; }
+  @media screen and (min-width: 769px) {
+    .flex > .column {
+      flex-basis: 0;
+      flex-grow: 1;
+      flex-shrink: 1; } }
+
+@media screen and (min-width: 769px) {
+  .flex--align-top {
+    align-items: flex-start; }
+  .flex--align-center {
+    align-items: center; }
+  .flex--align-bottom {
+    align-items: flex-end; }
+  .flex--gap-1 {
+    --column-gap: 0.75rem;
+    margin-right: calc(var(--column-gap) * -1);
+    margin-left: calc(var(--column-gap) * -1); }
+    .flex--gap-1 > .column {
+      padding-left: var(--column-gap);
+      padding-right: var(--column-gap); }
+  .flex--gap-2 {
+    --column-gap: 1rem;
+    margin-right: calc(var(--column-gap) * -1);
+    margin-left: calc(var(--column-gap) * -1); }
+    .flex--gap-2 > .column {
+      padding-left: var(--column-gap);
+      padding-right: var(--column-gap); }
+  .flex--gap-3 {
+    --column-gap: 1.25rem;
+    margin-right: calc(var(--column-gap) * -1);
+    margin-left: calc(var(--column-gap) * -1); }
+    .flex--gap-3 > .column {
+      padding-left: var(--column-gap);
+      padding-right: var(--column-gap); }
+  .flex--gap-4 {
+    --column-gap: 1.5rem;
+    margin-right: calc(var(--column-gap) * -1);
+    margin-left: calc(var(--column-gap) * -1); }
+    .flex--gap-4 > .column {
+      padding-left: var(--column-gap);
+      padding-right: var(--column-gap); }
+  .flex--gap-5 {
+    --column-gap: 1.75rem;
+    margin-right: calc(var(--column-gap) * -1);
+    margin-left: calc(var(--column-gap) * -1); }
+    .flex--gap-5 > .column {
+      padding-left: var(--column-gap);
+      padding-right: var(--column-gap); }
+  .flex--gap-6 {
+    --column-gap: 2rem;
+    margin-right: calc(var(--column-gap) * -1);
+    margin-left: calc(var(--column-gap) * -1); }
+    .flex--gap-6 > .column {
+      padding-left: var(--column-gap);
+      padding-right: var(--column-gap); }
+  .flex--gap-7 {
+    --column-gap: 2.25rem;
+    margin-right: calc(var(--column-gap) * -1);
+    margin-left: calc(var(--column-gap) * -1); }
+    .flex--gap-7 > .column {
+      padding-left: var(--column-gap);
+      padding-right: var(--column-gap); }
+  .flex--gap-8 {
+    --column-gap: 2.5rem;
+    margin-right: calc(var(--column-gap) * -1);
+    margin-left: calc(var(--column-gap) * -1); }
+    .flex--gap-8 > .column {
+      padding-left: var(--column-gap);
+      padding-right: var(--column-gap); }
+  .flex--gap-9 {
+    --column-gap: 2.75rem;
+    margin-right: calc(var(--column-gap) * -1);
+    margin-left: calc(var(--column-gap) * -1); }
+    .flex--gap-9 > .column {
+      padding-left: var(--column-gap);
+      padding-right: var(--column-gap); }
+  .flex--gap-10 {
+    --column-gap: 3rem;
+    margin-right: calc(var(--column-gap) * -1);
+    margin-left: calc(var(--column-gap) * -1); }
+    .flex--gap-10 > .column {
+      padding-left: var(--column-gap);
+      padding-right: var(--column-gap); } }
+
+@media screen and (min-width: 769px) {
+  .flex > .column--size-1 {
+    --column-size: 8.33333%;
+    flex: none;
+    width: var(--column-size); }
+  .flex > .column--size-2 {
+    --column-size: 16.66667%;
+    flex: none;
+    width: var(--column-size); }
+  .flex > .column--size-3 {
+    --column-size: 25%;
+    flex: none;
+    width: var(--column-size); }
+  .flex > .column--size-4 {
+    --column-size: 33.33333%;
+    flex: none;
+    width: var(--column-size); }
+  .flex > .column--size-5 {
+    --column-size: 41.66667%;
+    flex: none;
+    width: var(--column-size); }
+  .flex > .column--size-6 {
+    --column-size: 50%;
+    flex: none;
+    width: var(--column-size); }
+  .flex > .column--size-7 {
+    --column-size: 58.33333%;
+    flex: none;
+    width: var(--column-size); }
+  .flex > .column--size-8 {
+    --column-size: 66.66667%;
+    flex: none;
+    width: var(--column-size); }
+  .flex > .column--size-9 {
+    --column-size: 75%;
+    flex: none;
+    width: var(--column-size); }
+  .flex > .column--size-10 {
+    --column-size: 83.33333%;
+    flex: none;
+    width: var(--column-size); }
+  .flex > .column--size-11 {
+    --column-size: 91.66667%;
+    flex: none;
+    width: var(--column-size); }
+  .flex > .column--size-12 {
+    --column-size: 100%;
+    flex: none;
+    width: var(--column-size); } }
 
 /*# sourceMappingURL=ceratops.css.map */

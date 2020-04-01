@@ -4,8 +4,8 @@
 	width: auto;
 
 	@media screen and (max-width: $tablet-landscape-max) {
-		margin-right: $margin-right;
-		margin-left: $margin-left;
+		margin-right: $margin;
+		margin-left: $margin;
 	}
 
 	@media screen and (min-width: $tablet-landscape) {

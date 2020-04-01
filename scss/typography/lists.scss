@@ -1,5 +1,5 @@
 @mixin list() {
-	margin-left: $margin-left;
+	margin-left: $margin;
 
 	list-style-position: outside;
 }
@@ -18,6 +18,6 @@ ol {
 
 dl {
 	dd {
-		margin-left: $margin-left;
+		margin-left: $margin;
 	}
 }
