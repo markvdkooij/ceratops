@@ -1,5 +1,5 @@
 @mixin list() {
-	margin-left: $margin;
+	margin-left: #{$margin * 1.25};
 
 	list-style-position: outside;
 }

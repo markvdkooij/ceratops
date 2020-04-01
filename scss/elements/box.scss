@@ -1,0 +1,18 @@
+.box {
+	$box: &;
+
+	margin-bottom: $margin;
+	padding: $padding #{$padding * 1.25};
+
+	background-color: $color-background;
+	border: 1px solid $color-border;
+	box-shadow: 0 0 10px $color-shadow;
+
+	border-radius: $radius;
+
+	&--neat {
+		> *:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

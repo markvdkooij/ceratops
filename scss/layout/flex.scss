@@ -35,16 +35,40 @@
 
 .flex {
 	@media screen and (min-width: $tablet-portrait) {
-		&--align-top {
+		&--valign-top {
 			align-items: flex-start;
 		}
 
-		&--align-center {
+		&--valign-center {
 			align-items: center;
 		}
 
-		&--align-bottom {
+		&--valign-bottom {
 			align-items: flex-end;
+		}
+
+		&--halign-left {
+			justify-content: flex-start;
+
+			> .column {
+				text-align: left;
+			}
+		}
+
+		&--halign-center {
+			justify-content: center;
+
+			> .column {
+				text-align: center;
+			}
+		}
+
+		&--halign-right {
+			justify-content: flex-end;
+
+			> .column {
+				text-align: right;
+			}
 		}
 
 		@for $gi from 1 through 10 {

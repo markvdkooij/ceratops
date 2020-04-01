@@ -1,0 +1,45 @@
+// mixins
+
+@mixin anchor-style-regular($color-text) {
+	color: $color-text;
+
+	&:visited {
+		color: $color-text;
+	}
+
+	&:hover {
+		color: darken($color-text, 5);
+	}
+
+	&:active,
+	&:focus {
+		color: darken($color-text, 10);
+	}
+}
+
+// anchor
+
+a,
+.anchor {
+	display: inline;
+
+	text-decoration: underline;
+
+	outline: none;
+
+	cursor: pointer;
+
+	@include anchor-style-regular($color-primary);
+
+	&--primary {
+		@include anchor-style-regular($color-primary);
+	}
+
+	&--secondary {
+		@include anchor-style-regular($color-secondary);
+	}
+
+	&--tertiary {
+		@include anchor-style-regular($color-tertiary);
+	}
+}

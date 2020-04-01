@@ -1,6 +1,7 @@
 @mixin block() {
 	padding: $padding #{$padding * 1.25};
-	background-color: $color-background;
+	background-color: $color-background-fill;
+	border-radius: $radius;
 }
 
 pre {
@@ -22,6 +23,6 @@ code {
 hr {
 	height: 2px;
 
-	background-color: $color-background;
+	background-color: $color-background-fill;
 	border: none;
 }
