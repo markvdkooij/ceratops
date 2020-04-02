@@ -5,14 +5,21 @@
 	padding: $padding #{$padding * 1.25};
 
 	background-color: $color-background;
-	border: 1px solid $color-border;
-	box-shadow: 0 0 10px $color-shadow;
-
+	border: $border;
 	border-radius: $radius;
+	box-shadow: $shadow;
 
 	&--neat {
 		> *:last-child {
 			margin-bottom: 0;
+		}
+
+		> .flex:last-child {
+			.column {
+				> *:last-child {
+					margin-bottom: 0;
+				}
+			}
 		}
 	}
 }

@@ -75,7 +75,7 @@
 
 	cursor: pointer;
 
-	@include button-style-regular($color-body, $color-background-fill, $color-background-fill);
+	@include button-style-regular($color-body, $color-fill, $color-fill);
 
 	&--primary {
 		@include button-style-regular(#fff, $color-primary, $color-primary);

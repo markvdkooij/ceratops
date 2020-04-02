@@ -33,9 +33,3 @@ or
 ```html
 <link rel="stylesheet" href="ceratops/css/ceratops.min.css" />
 ```
-
-## Documentation
-
-Ceratops and its documentation are still in active development and you might not find everything you need.
-
-Look through the [documentation here](https://github.com/markvdkooij/ceratops/tree/master/docs).

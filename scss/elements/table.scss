@@ -1,4 +1,6 @@
 table {
+	box-shadow: $shadow;
+
 	tr {
 		th,
 		td {
@@ -8,7 +10,7 @@ table {
 		}
 
 		th {
-			background-color: $color-background-fill;
+			background-color: $color-fill;
 			font-weight: $header-font-weight;
 			vertical-align: middle;
 		}

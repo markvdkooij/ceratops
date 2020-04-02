@@ -3,17 +3,11 @@
 .flex {
 	$flex: &;
 
-	margin-top: -$column-gap;
+	margin-top: $margin;
+	margin-bottom: $margin;
+
 	margin-right: -$column-gap;
 	margin-left: -$column-gap;
-
-	&:not(:last-child) {
-		margin-bottom: #{$margin - $column-gap};
-	}
-
-	&:last-child {
-		margin-bottom: -$column-gap;
-	}
 
 	@media screen and (min-width: $tablet-portrait) {
 		display: flex;
@@ -22,7 +16,9 @@
 
 .flex > .column {
 	display: block;
-	padding: $column-gap;
+
+	padding-right: $column-gap;
+	padding-left: $column-gap;
 
 	@media screen and (min-width: $tablet-portrait) {
 		flex-basis: 0;
@@ -71,17 +67,22 @@
 			}
 		}
 
-		@for $gi from 1 through 10 {
-			&--gap-#{$gi} {
-				--column-gap: #{$column-gap + $gi * 0.25rem};
+		@for $i from 0 through 10 {
+			$variable-size: #{$i * 0.25rem};
 
-				margin-right: calc(var(--column-gap) * -1);
-				margin-left: calc(var(--column-gap) * -1);
+			&--padding-#{$i} {
+				margin-right: calc(#{$variable-size} * -1);
+				margin-left: calc(#{$variable-size} * -1);
 
 				> .column {
-					padding-left: var(--column-gap);
-					padding-right: var(--column-gap);
+					padding-left: $variable-size;
+					padding-right: $variable-size;
 				}
+			}
+
+			&--margin-#{$i} {
+				margin-top: $variable-size;
+				margin-bottom: $variable-size;
 			}
 		}
 	}
@@ -89,12 +90,10 @@
 
 .flex > .column {
 	@media screen and (min-width: $tablet-portrait) {
-		@for $si from 1 through 12 {
-			&--size-#{$si} {
-				--column-size: #{100% / 12 * $si};
-
+		@for $i from 1 through 12 {
+			&--size-#{$i} {
 				flex: none;
-				width: var(--column-size);
+				width: #{100% / 12 * $i};
 			}
 		}
 	}
