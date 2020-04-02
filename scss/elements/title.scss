@@ -1,0 +1,16 @@
+.title {
+	font-weight: $header-font-weight;
+
+	&:after {
+		content: '';
+		display: block;
+
+		width: inherit;
+		height: 1px;
+
+		margin-top: #{$margin / 2};
+
+		border-bottom: $border;
+		box-shadow: $shadow;
+	}
+}

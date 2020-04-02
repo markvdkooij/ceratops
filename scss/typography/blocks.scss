@@ -1,7 +1,15 @@
 @mixin block() {
+	margin-bottom: $margin;
 	padding: $padding #{$padding * 1.25};
-	background-color: $color-background-fill;
+
+	background-color: $color-background;
+	border: $border;
 	border-radius: $radius;
+	box-shadow: $shadow;
+}
+
+blockquote {
+	@include block();
 }
 
 pre {
@@ -12,17 +20,16 @@ pre {
 	word-wrap: normal;
 }
 
-blockquote {
-	@include block();
-}
-
 code {
 	@include block();
+
+	font-family: monospace;
 }
 
 hr {
-	height: 2px;
+	height: 1px;
 
-	background-color: $color-background-fill;
+	background-color: $color-fill;
 	border: none;
+	box-shadow: $shadow;
 }
