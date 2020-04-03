@@ -39,11 +39,11 @@ $color-fill: #f2f2f2 !default;
 $color-border: #f2f2f2 !default;
 $color-shadow: #f2f2f2 !default;
 
-// misc
+// box
 
 $radius: 3px !default;
-$border: 1px solid $color-border;
-$shadow: 0 2px 4px $color-shadow;
+$border: 1px solid $color-border !default;
+$shadow: 0 2px 4px $color-shadow !default;
 
 // media queries
 
