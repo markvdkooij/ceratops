@@ -1,6 +1,6 @@
 # Ceratops CSS
 
-A minimal CSS framework designed to kick-start your project. Many basic needs are supplied and are easily adjusted to your needs.
+A minimal CSS framework designed to kick-start your project. Many basic needs are supplied and are easily adjusted to your liking.
 
 ## Install
 
