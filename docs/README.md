@@ -1,18 +1,16 @@
 # Ceratops CSS
 
-A clean CSS framework designed to kick-start your project. Many basic needs are supplied and are easily adjusted to your needs.
+A minimal CSS framework designed to kick-start your project. Many basic needs are supplied and are easily adjusted to your needs.
 
 ## Install
 
-### Yarn
+#### Yarn
 
 ```sh
 yarn add ceratops
 ```
 
-or
-
-### NPM
+#### NPM
 
 ```sh
 npm install ceratops
@@ -20,16 +18,20 @@ npm install ceratops
 
 ## Usage
 
-### CSS
+#### SASS
 
 ```css
-@import 'ceratops/css/ceratops.min.css';
+@import 'ceratops/ceratops.scss';
 ```
 
-or
+#### CSS
 
-### HTML
+```css
+@import 'node_modules/ceratops/css/ceratops.min.css';
+```
+
+#### HTML
 
 ```html
-<link rel="stylesheet" href="ceratops/css/ceratops.min.css" />
+<link rel="stylesheet" href="node_modules/ceratops/css/ceratops.min.css" />
 ```
