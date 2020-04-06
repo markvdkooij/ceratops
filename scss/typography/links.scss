@@ -8,12 +8,12 @@
 	}
 
 	&:hover {
-		color: darken($color-text, 5);
+		color: darken($color-text, 10);
 	}
 
 	&:active,
 	&:focus {
-		color: darken($color-text, 10);
+		color: darken($color-text, 20);
 	}
 }
 

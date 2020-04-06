@@ -1,0 +1,48 @@
+@mixin input() {
+	display: block;
+
+	width: 100%;
+	height: auto;
+
+	margin-bottom: $margin;
+	padding: #{$padding / 2} $padding;
+
+	font-size: $body-font-size;
+	line-height: $body-line-height;
+	font-weight: $body-font-weight;
+	font-family: $body-font-family;
+
+	text-align: left;
+
+	border: $border;
+	border-color: $color-border-dark;
+	box-shadow: $shadow;
+	border-radius: $radius;
+
+	appearance: none;
+	text-indent: 0;
+
+	&:focus {
+		border-color: $color-primary;
+	}
+}
+
+.input {
+	@include input();
+}
+
+.textarea {
+	@include input();
+}
+
+.select {
+	@include input();
+
+	&[multiple] {
+		padding: 0;
+
+		option {
+			padding: #{$padding / 2} $padding;
+		}
+	}
+}

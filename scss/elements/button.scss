@@ -53,12 +53,15 @@
 // button
 
 .button {
+	--padding-vertices: calc(#{$padding / 2} - 1px);
+	--padding-sides: #{$padding};
+
 	display: inline-block;
 
 	width: auto;
 	height: auto;
 
-	padding: #{$padding / 2} $padding;
+	padding: var(--padding-vertices) var(--padding-sides);
 
 	font-size: $body-font-size;
 	line-height: $body-line-height;
@@ -73,6 +76,7 @@
 	border: 2px solid transparent;
 	border-radius: $radius;
 
+	white-space: pre;
 	cursor: pointer;
 
 	@include button-style-regular($color-body, $color-fill, $color-fill);
