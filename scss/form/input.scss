@@ -23,7 +23,30 @@
 	text-indent: 0;
 
 	&:focus {
-		border-color: $color-primary;
+		border-color: $color-focus;
+		box-shadow: $shadow-center $color-focus;
+	}
+
+	&--focus {
+		border-color: $color-focus;
+	}
+
+	&--success {
+		border-color: $color-success;
+
+		&:focus {
+			border-color: $color-success;
+			box-shadow: $shadow-center $color-success;
+		}
+	}
+
+	&--error {
+		border-color: $color-error;
+
+		&:focus {
+			border-color: $color-error;
+			box-shadow: $shadow-center $color-error;
+		}
 	}
 }
 
@@ -33,6 +56,8 @@
 
 .textarea {
 	@include input();
+
+	min-height: 120px;
 }
 
 .select {

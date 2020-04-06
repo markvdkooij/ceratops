@@ -1,0 +1,15 @@
+$mod-font-weights: 100, 200, 300, 400, 500, 600, 700, 800, 900;
+
+@each $mod-font-weight in $mod-font-weights {
+	.mod-font-weight-#{$mod-font-weight} {
+		font-weight: #{$mod-font-weight};
+	}
+}
+
+$mod-text-aligns: left, center, right, justify;
+
+@each $mod-text-align in $mod-text-aligns {
+	.mod-text-align-#{$mod-text-align} {
+		text-align: #{$mod-text-align};
+	}
+}

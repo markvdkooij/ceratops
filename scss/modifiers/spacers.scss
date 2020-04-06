@@ -1,0 +1,18 @@
+$mod-spacers: margin, padding;
+$mod-directions: top, right, bottom, left;
+
+@for $i from 0 through 10 {
+	$variable-size: #{$i * 0.5rem};
+
+	@each $mod-spacer in $mod-spacers {
+		.mod-#{$mod-spacer}-#{$i} {
+			#{$mod-spacer}: #{$variable-size};
+		}
+
+		@each $mod-direction in $mod-directions {
+			.mod-#{$mod-spacer}-#{$mod-direction}-#{$i} {
+				#{$mod-spacer}-#{$mod-direction}: #{$variable-size};
+			}
+		}
+	}
+}

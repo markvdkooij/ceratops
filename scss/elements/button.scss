@@ -78,6 +78,7 @@
 
 	white-space: pre;
 	cursor: pointer;
+	appearance: none;
 
 	@include button-style-regular($color-body, $color-fill, $color-fill);
 

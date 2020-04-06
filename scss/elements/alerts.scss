@@ -1,0 +1,24 @@
+.alert {
+	margin-bottom: $margin;
+	padding: #{$padding / 2} $padding;
+
+	background-color: $color-background;
+	border: $border;
+	border-radius: $radius;
+	box-shadow: $shadow;
+
+	&--focus {
+		background-color: $color-focus-light;
+		border-color: $color-focus;
+	}
+
+	&--success {
+		background-color: $color-success-light;
+		border-color: $color-success;
+	}
+
+	&--error {
+		background-color: $color-error-light;
+		border-color: $color-error;
+	}
+}
