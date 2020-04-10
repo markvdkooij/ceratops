@@ -1,5 +1,6 @@
 @mixin list() {
-	margin-left: #{$margin * 1.25};
+	margin-bottom: $margin;
+	padding-left: #{$padding * 1.25};
 
 	list-style-position: outside;
 }
@@ -18,6 +19,37 @@ ol {
 
 dl {
 	dd {
-		margin-left: $margin;
+		padding-left: $padding;
+	}
+}
+
+.list {
+	$list: &;
+
+	@include list();
+
+	list-style-type: disc;
+
+	&__item {
+		display: list-item;
+	}
+
+	&--unordered {
+		list-style-type: disc;
+	}
+
+	&--ordered {
+		list-style-type: decimal;
+	}
+
+	&--horizontal {
+		padding-left: 0;
+
+		list-style: none;
+
+		#{$list}__item {
+			display: inline-block;
+			margin-right: #{$margin / 2};
+		}
 	}
 }

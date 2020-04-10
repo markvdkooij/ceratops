@@ -1,0 +1,18 @@
+// color, background-color
+
+$mod-colors: (
+	primary: $color-primary,
+	secondary: $color-secondary,
+	tertiary: $color-tertiary,
+);
+
+@each $label, $value in $mod-colors {
+	.#{$mod-prefix}-color-#{$label} {
+		color: #{$value};
+		border-color: #{$value};
+	}
+
+	.#{$mod-prefix}-background-color-#{$label} {
+		background-color: #{$value};
+	}
+}

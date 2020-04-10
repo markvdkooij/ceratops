@@ -1,16 +1,29 @@
-$mod-spacers: margin, padding;
+$mod-spacers: (
+	margin: $margin,
+	padding: $padding,
+);
 $mod-directions: top, right, bottom, left;
 
-@for $i from 0 through 10 {
-	$variable-size: #{$i * 0.5rem};
+@each $mod-spacer, $mod-value in $mod-spacers {
+	.#{$mod-prefix}-#{$mod-spacer} {
+		#{$mod-spacer}: #{$mod-value};
+	}
 
-	@each $mod-spacer in $mod-spacers {
-		.mod-#{$mod-spacer}-#{$i} {
+	@each $mod-direction in $mod-directions {
+		.#{$mod-prefix}-#{$mod-spacer}-#{$mod-direction} {
+			#{$mod-spacer}-#{$mod-direction}: #{$mod-value};
+		}
+	}
+
+	@for $i from 0 through 10 {
+		$variable-size: #{$i * 0.5rem};
+
+		.#{$mod-prefix}-#{$mod-spacer}-#{$i} {
 			#{$mod-spacer}: #{$variable-size};
 		}
 
 		@each $mod-direction in $mod-directions {
-			.mod-#{$mod-spacer}-#{$mod-direction}-#{$i} {
+			.#{$mod-prefix}-#{$mod-spacer}-#{$mod-direction}-#{$i} {
 				#{$mod-spacer}-#{$mod-direction}: #{$variable-size};
 			}
 		}

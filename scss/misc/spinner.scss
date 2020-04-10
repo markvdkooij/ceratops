@@ -1,0 +1,41 @@
+.spinner {
+	display: inline-block;
+
+	$size: #{$body-font-size * 2};
+	$border: #{$body-font-size / 6};
+
+	width: $size;
+	height: $size;
+	border: $border solid $color-body;
+
+	border-right-color: transparent;
+	border-radius: 50%;
+
+	vertical-align: middle;
+
+	animation: spinner 0.75s linear infinite;
+
+	@for $i from 0 through 10 {
+		&--size-#{$i} {
+			$size: #{$body-font-size * $i};
+			$border: #{$body-font-size / 12 * $i};
+
+			width: $size;
+			height: $size;
+			border-width: $border;
+		}
+	}
+
+	&[class*='#{$mod-prefix}-color-'] {
+		border-right-color: transparent;
+	}
+}
+
+@keyframes spinner {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
