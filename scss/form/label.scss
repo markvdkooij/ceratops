@@ -1,0 +1,74 @@
+@mixin label() {
+	display: inline-block;
+
+	font-weight: $header-font-weight;
+}
+
+.field {
+	&--inline {
+		margin-bottom: $margin;
+
+		@media screen and (min-width: $tablet-portrait) {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+		}
+
+		label {
+			@media screen and (min-width: $tablet-portrait) {
+				min-width: 200px;
+				width: 25%;
+				margin: 0;
+			}
+		}
+
+		.input,
+		.textarea,
+		.select {
+			margin: 0;
+
+			@media screen and (min-width: $tablet-portrait) {
+				width: 75%;
+			}
+		}
+
+		.alert {
+			display: block;
+			flex: 1 1 auto;
+			margin: $margin 0 0;
+		}
+	}
+}
+
+label {
+	@include label();
+
+	margin-bottom: #{$margin / 4};
+}
+
+.radio-group,
+.checkbox-group {
+	margin-bottom: $margin;
+
+	label {
+		font-weight: $body-font-weight;
+	}
+
+	input[type='radio'],
+	input[type='checkbox'] {
+		margin-right: #{$margin / 4};
+	}
+
+	.field {
+		&--inline {
+			display: inline-block;
+			margin-bottom: 0;
+
+			label {
+				min-width: initial;
+				width: auto;
+				margin-right: $margin;
+			}
+		}
+	}
+}
