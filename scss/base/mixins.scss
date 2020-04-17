@@ -1,8 +1,8 @@
 @mixin spinner() {
-	display: inline-block;
-
 	$size: 1em;
-	$border: #{$body-font-size / 6};
+	$border: calc(#{$size} / 6);
+
+	display: inline-block;
 
 	width: $size;
 	height: $size;
@@ -13,7 +13,7 @@
 	border-right-color: transparent;
 	border-radius: 50%;
 
-	vertical-align: sub;
+	vertical-align: text-top;
 
 	animation: spinner 0.75s linear infinite;
 }

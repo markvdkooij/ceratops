@@ -1,4 +1,4 @@
-/*! ceratops v0.3.2 | MIT License | github.com/markvdkooij/ceratops */
+/*! ceratops v0.3.3 | MIT License | github.com/markvdkooij/ceratops */
 * {
   margin: 0;
   padding: 0;
@@ -1100,10 +1100,10 @@ dl dd {
       width: 1em;
       height: 1em;
       margin-right: 0.5rem;
-      border: 2.66667px solid #2a2a2a;
+      border: calc(1em / 6) solid #2a2a2a;
       border-right-color: transparent;
       border-radius: 50%;
-      vertical-align: sub;
+      vertical-align: text-top;
       -webkit-animation: spinner 0.75s linear infinite;
               animation: spinner 0.75s linear infinite;
       position: absolute;
@@ -1290,56 +1290,67 @@ label {
   width: 1em;
   height: 1em;
   margin-right: 0.5rem;
-  border: 2.66667px solid #2a2a2a;
+  border: calc(1em / 6) solid #2a2a2a;
   border-right-color: transparent;
   border-radius: 50%;
-  vertical-align: sub;
+  vertical-align: text-top;
   -webkit-animation: spinner 0.75s linear infinite;
           animation: spinner 0.75s linear infinite; }
   .spinner--size-0 {
-    width: 0rem;
-    height: 0rem;
-    border-width: 0rem; }
+    width: 0em;
+    height: 0em;
+    border-width: 0em;
+    vertical-align: middle; }
   .spinner--size-1 {
-    width: 1rem;
-    height: 1rem;
-    border-width: 0.16667rem; }
+    width: 1em;
+    height: 1em;
+    border-width: 0.16667em;
+    vertical-align: middle; }
   .spinner--size-2 {
-    width: 2rem;
-    height: 2rem;
-    border-width: 0.33333rem; }
+    width: 2em;
+    height: 2em;
+    border-width: 0.33333em;
+    vertical-align: middle; }
   .spinner--size-3 {
-    width: 3rem;
-    height: 3rem;
-    border-width: 0.5rem; }
+    width: 3em;
+    height: 3em;
+    border-width: 0.5em;
+    vertical-align: middle; }
   .spinner--size-4 {
-    width: 4rem;
-    height: 4rem;
-    border-width: 0.66667rem; }
+    width: 4em;
+    height: 4em;
+    border-width: 0.66667em;
+    vertical-align: middle; }
   .spinner--size-5 {
-    width: 5rem;
-    height: 5rem;
-    border-width: 0.83333rem; }
+    width: 5em;
+    height: 5em;
+    border-width: 0.83333em;
+    vertical-align: middle; }
   .spinner--size-6 {
-    width: 6rem;
-    height: 6rem;
-    border-width: 1rem; }
+    width: 6em;
+    height: 6em;
+    border-width: 1em;
+    vertical-align: middle; }
   .spinner--size-7 {
-    width: 7rem;
-    height: 7rem;
-    border-width: 1.16667rem; }
+    width: 7em;
+    height: 7em;
+    border-width: 1.16667em;
+    vertical-align: middle; }
   .spinner--size-8 {
-    width: 8rem;
-    height: 8rem;
-    border-width: 1.33333rem; }
+    width: 8em;
+    height: 8em;
+    border-width: 1.33333em;
+    vertical-align: middle; }
   .spinner--size-9 {
-    width: 9rem;
-    height: 9rem;
-    border-width: 1.5rem; }
+    width: 9em;
+    height: 9em;
+    border-width: 1.5em;
+    vertical-align: middle; }
   .spinner--size-10 {
-    width: 10rem;
-    height: 10rem;
-    border-width: 1.66667rem; }
+    width: 10em;
+    height: 10em;
+    border-width: 1.66667em;
+    vertical-align: middle; }
 
 @-webkit-keyframes spinner {
   0% {

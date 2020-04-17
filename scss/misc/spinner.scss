@@ -3,12 +3,14 @@
 
 	@for $i from 0 through 10 {
 		&--size-#{$i} {
-			$size: #{1rem * $i};
-			$border: #{1rem / 6 * $i};
+			$size: #{1em * $i};
+			$border: #{1em / 6 * $i};
 
 			width: $size;
 			height: $size;
 			border-width: $border;
+
+			vertical-align: middle;
 		}
 	}
 }
