@@ -1,0 +1,19 @@
+@mixin spinner() {
+	display: inline-block;
+
+	$size: 1em;
+	$border: #{$body-font-size / 6};
+
+	width: $size;
+	height: $size;
+
+	margin-right: #{$margin / 2};
+
+	border: $border solid $color-body;
+	border-right-color: transparent;
+	border-radius: 50%;
+
+	vertical-align: sub;
+
+	animation: spinner 0.75s linear infinite;
+}
