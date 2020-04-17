@@ -30,6 +30,7 @@ $column-gap: 0.75rem !default;
 $color-body: #2a2a2a !default;
 $color-header: #2a2a2a !default;
 $color-background: #ffffff !default;
+$color-html: #f9f9f9 !default;
 
 $color-primary: #ba403f !default;
 $color-secondary: #3c887e !default;
@@ -40,21 +41,21 @@ $color-border: #ebebeb !default;
 $color-border-dark: darken(#ebebeb, 5) !default;
 $color-shadow: #ebebeb !default;
 
-$color-focus: #3989ce !default;
-$color-focus-light: lighten($color-focus, 45) !default;
+$color-focus: #297abf !default;
+$color-focus-light: lighten($color-focus, 50) !default;
 
-$color-success: #149547 !default;
-$color-success-light: lighten($color-success, 60) !default;
+$color-success: #29a258 !default;
+$color-success-light: lighten($color-success, 55) !default;
 
-$color-error: #ca1f1f !default;
-$color-error-light: lighten($color-error, 50) !default;
+$color-error: #d53a3a !default;
+$color-error-light: lighten($color-error, 42) !default;
 
 // box
 
 $radius: 3px !default;
 $border: 1px solid $color-border !default;
-$shadow: 0 2px 6px $color-shadow !default;
-$shadow-center: 0 0 3px !default;
+$shadow: 0 2px 0 $color-shadow !default;
+$shadow-opt: 0 2px 0 !default;
 
 // modifiers
 

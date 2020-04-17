@@ -29,6 +29,7 @@
 	color: $color-background;
 	background-color: $color-text;
 	border-color: $color-border;
+	box-shadow: $shadow-opt $color-border;
 
 	&:visited {
 		color: $color-background;
@@ -73,7 +74,7 @@
 	vertical-align: baseline;
 
 	outline: none;
-	border: 2px solid transparent;
+	border: 1px solid transparent;
 	border-radius: $radius;
 
 	white-space: pre;

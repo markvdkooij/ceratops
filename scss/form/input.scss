@@ -22,31 +22,20 @@
 	appearance: none;
 	text-indent: 0;
 
-	&:focus {
-		border-color: $color-focus;
-		box-shadow: $shadow-center $color-focus;
-	}
-
+	&:focus,
 	&--focus {
 		border-color: $color-focus;
+		box-shadow: $shadow-opt $color-focus;
 	}
 
 	&--success {
 		border-color: $color-success;
-
-		&:focus {
-			border-color: $color-success;
-			box-shadow: $shadow-center $color-success;
-		}
+		box-shadow: $shadow-opt $color-success;
 	}
 
 	&--error {
 		border-color: $color-error;
-
-		&:focus {
-			border-color: $color-error;
-			box-shadow: $shadow-center $color-error;
-		}
+		box-shadow: $shadow-opt $color-error;
 	}
 }
 
