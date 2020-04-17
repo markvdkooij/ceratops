@@ -29,6 +29,7 @@
 	color: $color-background;
 	background-color: $color-text;
 	border-color: $color-border;
+	box-shadow: $shadow-opt $color-border;
 
 	&:visited {
 		color: $color-background;
@@ -73,7 +74,7 @@
 	vertical-align: baseline;
 
 	outline: none;
-	border: 2px solid transparent;
+	border: 1px solid transparent;
 	border-radius: $radius;
 
 	white-space: pre;
@@ -104,5 +105,36 @@
 		&--inverted {
 			@include button-style-inverted(#fff, $color-tertiary, $color-tertiary);
 		}
+	}
+
+	&:disabled,
+	.disabled {
+		opacity: 0.5;
+	}
+
+	&--loading {
+		position: relative;
+		color: transparent !important;
+
+		&:after {
+			content: '';
+			@include spinner();
+
+			position: absolute;
+			top: calc(50% - #{$body-font-size * 1.25} / 2);
+			left: calc(50% - #{$body-font-size * 1.25} / 2);
+
+			margin: 0;
+
+			border-color: #fff;
+			border-right-color: transparent;
+		}
+	}
+}
+
+.button-group {
+	.button {
+		margin-right: #{$margin / 2};
+		margin-bottom: #{$margin / 2};
 	}
 }

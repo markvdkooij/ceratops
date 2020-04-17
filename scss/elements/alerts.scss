@@ -1,6 +1,6 @@
 .alert {
 	margin-bottom: $margin;
-	padding: #{$padding / 1.5} $padding;
+	padding: #{$padding / 2} $padding;
 
 	background-color: $color-background;
 	border: $border;
@@ -8,17 +8,34 @@
 	box-shadow: $shadow;
 
 	&--focus {
-		background-color: $color-focus-light;
-		border-color: $color-focus;
+		--color-background: #{$color-focus-light};
+		--color-border: #{$color-focus};
+		--shadow: #{$shadow-opt} #{$color-focus};
 	}
 
 	&--success {
-		background-color: $color-success-light;
-		border-color: $color-success;
+		--color-background: #{$color-success-light};
+		--color-border: #{$color-success};
+		--shadow: #{$shadow-opt} #{$color-success};
 	}
 
 	&--error {
-		background-color: $color-error-light;
-		border-color: $color-error;
+		--color-background: #{$color-error-light};
+		--color-border: #{$color-error};
+		--shadow: #{$shadow-opt} #{$color-error};
+	}
+
+	background-color: var(--color-background);
+	border-color: var(--color-border);
+	box-shadow: var(--shadow);
+
+	&--inline {
+		padding: 0;
+
+		background-color: $color-background;
+		border: none;
+		box-shadow: none;
+
+		color: var(--color-border);
 	}
 }

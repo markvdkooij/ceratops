@@ -1,6 +1,6 @@
 {
 	"name": "ceratops",
-	"version": "0.3.0",
+	"version": "0.3.2",
 	"description": "CSS framework designed to use for every web project.",
 	"main": "gulpfile.js",
 	"repository": "https://github.com/markvdkooij/ceratops.git",
