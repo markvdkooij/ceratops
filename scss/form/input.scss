@@ -41,6 +41,10 @@
 
 .input {
 	@include input();
+
+	& + .alert {
+		margin-top: -#{$margin * 0.75};
+	}
 }
 
 .textarea {

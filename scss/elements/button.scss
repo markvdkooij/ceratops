@@ -133,8 +133,16 @@
 }
 
 .button-group {
+	margin-bottom: $margin;
+
 	.button {
 		margin-right: #{$margin / 2};
 		margin-bottom: #{$margin / 2};
+	}
+
+	a {
+		display: inline-block;
+		margin-left: #{$margin / 2};
+		margin-right: $margin;
 	}
 }
