@@ -1,4 +1,4 @@
-/*! ceratops v0.3.3 | MIT License | github.com/markvdkooij/ceratops */
+/*! ceratops v0.3.4 | MIT License | github.com/markvdkooij/ceratops */
 * {
   margin: 0;
   padding: 0;
@@ -754,124 +754,150 @@ dl dd {
       flex-grow: 1;
       flex-shrink: 1; } }
 
-@media screen and (min-width: 769px) {
-  .flex--valign-top {
-    align-items: flex-start; }
-  .flex--valign-center {
-    align-items: center; }
-  .flex--valign-bottom {
-    align-items: flex-end; }
-  .flex--halign-left {
-    justify-content: flex-start; }
-    .flex--halign-left > .column {
-      text-align: left; }
-  .flex--halign-center {
-    justify-content: center; }
-    .flex--halign-center > .column {
-      text-align: center; }
-  .flex--halign-right {
-    justify-content: flex-end; }
-    .flex--halign-right > .column {
-      text-align: right; }
-  .flex--padding-0 {
-    margin-right: calc(0rem * -1);
-    margin-left: calc(0rem * -1); }
-    .flex--padding-0 > .column {
-      padding-left: 0rem;
-      padding-right: 0rem; }
-  .flex--margin-0 {
-    margin-top: 0rem;
-    margin-bottom: 0rem; }
-  .flex--padding-1 {
-    margin-right: calc(0.25rem * -1);
-    margin-left: calc(0.25rem * -1); }
-    .flex--padding-1 > .column {
-      padding-left: 0.25rem;
-      padding-right: 0.25rem; }
-  .flex--margin-1 {
-    margin-top: 0.25rem;
-    margin-bottom: 0.25rem; }
-  .flex--padding-2 {
-    margin-right: calc(0.5rem * -1);
-    margin-left: calc(0.5rem * -1); }
-    .flex--padding-2 > .column {
-      padding-left: 0.5rem;
-      padding-right: 0.5rem; }
-  .flex--margin-2 {
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem; }
-  .flex--padding-3 {
-    margin-right: calc(0.75rem * -1);
-    margin-left: calc(0.75rem * -1); }
-    .flex--padding-3 > .column {
-      padding-left: 0.75rem;
-      padding-right: 0.75rem; }
-  .flex--margin-3 {
-    margin-top: 0.75rem;
-    margin-bottom: 0.75rem; }
-  .flex--padding-4 {
-    margin-right: calc(1rem * -1);
-    margin-left: calc(1rem * -1); }
-    .flex--padding-4 > .column {
-      padding-left: 1rem;
-      padding-right: 1rem; }
-  .flex--margin-4 {
-    margin-top: 1rem;
-    margin-bottom: 1rem; }
-  .flex--padding-5 {
-    margin-right: calc(1.25rem * -1);
-    margin-left: calc(1.25rem * -1); }
-    .flex--padding-5 > .column {
-      padding-left: 1.25rem;
-      padding-right: 1.25rem; }
-  .flex--margin-5 {
-    margin-top: 1.25rem;
-    margin-bottom: 1.25rem; }
-  .flex--padding-6 {
-    margin-right: calc(1.5rem * -1);
-    margin-left: calc(1.5rem * -1); }
-    .flex--padding-6 > .column {
-      padding-left: 1.5rem;
-      padding-right: 1.5rem; }
-  .flex--margin-6 {
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem; }
-  .flex--padding-7 {
-    margin-right: calc(1.75rem * -1);
-    margin-left: calc(1.75rem * -1); }
-    .flex--padding-7 > .column {
-      padding-left: 1.75rem;
-      padding-right: 1.75rem; }
-  .flex--margin-7 {
-    margin-top: 1.75rem;
-    margin-bottom: 1.75rem; }
-  .flex--padding-8 {
-    margin-right: calc(2rem * -1);
-    margin-left: calc(2rem * -1); }
-    .flex--padding-8 > .column {
-      padding-left: 2rem;
-      padding-right: 2rem; }
-  .flex--margin-8 {
-    margin-top: 2rem;
-    margin-bottom: 2rem; }
-  .flex--padding-9 {
-    margin-right: calc(2.25rem * -1);
-    margin-left: calc(2.25rem * -1); }
-    .flex--padding-9 > .column {
-      padding-left: 2.25rem;
-      padding-right: 2.25rem; }
-  .flex--margin-9 {
-    margin-top: 2.25rem;
-    margin-bottom: 2.25rem; }
-  .flex--padding-10 {
-    margin-right: calc(2.5rem * -1);
-    margin-left: calc(2.5rem * -1); }
-    .flex--padding-10 > .column {
-      padding-left: 2.5rem;
-      padding-right: 2.5rem; }
-  .flex--margin-10 {
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem; } }
+.flex--valign-top {
+  align-items: flex-start; }
+
+.flex--valign-center {
+  align-items: center; }
+
+.flex--valign-bottom {
+  align-items: flex-end; }
+
+.flex--halign-left {
+  justify-content: flex-start; }
+  .flex--halign-left > .column {
+    text-align: left; }
+
+.flex--halign-center {
+  justify-content: center; }
+  .flex--halign-center > .column {
+    text-align: center; }
+
+.flex--halign-right {
+  justify-content: flex-end; }
+  .flex--halign-right > .column {
+    text-align: right; }
+
+.flex--padding-0 {
+  margin-right: calc(0rem * -1);
+  margin-left: calc(0rem * -1); }
+  .flex--padding-0 > .column {
+    padding-left: 0rem;
+    padding-right: 0rem; }
+
+.flex--margin-0 {
+  margin-top: 0rem;
+  margin-bottom: 0rem; }
+
+.flex--padding-1 {
+  margin-right: calc(0.25rem * -1);
+  margin-left: calc(0.25rem * -1); }
+  .flex--padding-1 > .column {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem; }
+
+.flex--margin-1 {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem; }
+
+.flex--padding-2 {
+  margin-right: calc(0.5rem * -1);
+  margin-left: calc(0.5rem * -1); }
+  .flex--padding-2 > .column {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem; }
+
+.flex--margin-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem; }
+
+.flex--padding-3 {
+  margin-right: calc(0.75rem * -1);
+  margin-left: calc(0.75rem * -1); }
+  .flex--padding-3 > .column {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem; }
+
+.flex--margin-3 {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem; }
+
+.flex--padding-4 {
+  margin-right: calc(1rem * -1);
+  margin-left: calc(1rem * -1); }
+  .flex--padding-4 > .column {
+    padding-left: 1rem;
+    padding-right: 1rem; }
+
+.flex--margin-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
+
+.flex--padding-5 {
+  margin-right: calc(1.25rem * -1);
+  margin-left: calc(1.25rem * -1); }
+  .flex--padding-5 > .column {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem; }
+
+.flex--margin-5 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem; }
+
+.flex--padding-6 {
+  margin-right: calc(1.5rem * -1);
+  margin-left: calc(1.5rem * -1); }
+  .flex--padding-6 > .column {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem; }
+
+.flex--margin-6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem; }
+
+.flex--padding-7 {
+  margin-right: calc(1.75rem * -1);
+  margin-left: calc(1.75rem * -1); }
+  .flex--padding-7 > .column {
+    padding-left: 1.75rem;
+    padding-right: 1.75rem; }
+
+.flex--margin-7 {
+  margin-top: 1.75rem;
+  margin-bottom: 1.75rem; }
+
+.flex--padding-8 {
+  margin-right: calc(2rem * -1);
+  margin-left: calc(2rem * -1); }
+  .flex--padding-8 > .column {
+    padding-left: 2rem;
+    padding-right: 2rem; }
+
+.flex--margin-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem; }
+
+.flex--padding-9 {
+  margin-right: calc(2.25rem * -1);
+  margin-left: calc(2.25rem * -1); }
+  .flex--padding-9 > .column {
+    padding-left: 2.25rem;
+    padding-right: 2.25rem; }
+
+.flex--margin-9 {
+  margin-top: 2.25rem;
+  margin-bottom: 2.25rem; }
+
+.flex--padding-10 {
+  margin-right: calc(2.5rem * -1);
+  margin-left: calc(2.5rem * -1); }
+  .flex--padding-10 > .column {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem; }
+
+.flex--margin-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem; }
 
 @media screen and (min-width: 769px) {
   .flex > .column--size-1 {
@@ -1113,9 +1139,15 @@ dl dd {
       border-color: #fff;
       border-right-color: transparent; }
 
-.button-group .button {
-  margin-right: 0.5rem;
-  margin-bottom: 0.5rem; }
+.button-group {
+  margin-bottom: 1rem; }
+  .button-group .button {
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem; }
+  .button-group a {
+    display: inline-block;
+    margin-left: 0.5rem;
+    margin-right: 1rem; }
 
 table {
   box-shadow: 0 2px 0 #ebebeb; }
@@ -1169,6 +1201,8 @@ table {
   .input--error {
     border-color: #d53a3a;
     box-shadow: 0 2px 0 #d53a3a; }
+  .input + .alert {
+    margin-top: -0.75rem; }
 
 .textarea {
   display: block;

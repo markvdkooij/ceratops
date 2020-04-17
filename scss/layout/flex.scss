@@ -30,60 +30,58 @@
 // modifiers
 
 .flex {
-	@media screen and (min-width: $tablet-portrait) {
-		&--valign-top {
-			align-items: flex-start;
-		}
+	&--valign-top {
+		align-items: flex-start;
+	}
 
-		&--valign-center {
-			align-items: center;
-		}
+	&--valign-center {
+		align-items: center;
+	}
 
-		&--valign-bottom {
-			align-items: flex-end;
-		}
+	&--valign-bottom {
+		align-items: flex-end;
+	}
 
-		&--halign-left {
-			justify-content: flex-start;
+	&--halign-left {
+		justify-content: flex-start;
+
+		> .column {
+			text-align: left;
+		}
+	}
+
+	&--halign-center {
+		justify-content: center;
+
+		> .column {
+			text-align: center;
+		}
+	}
+
+	&--halign-right {
+		justify-content: flex-end;
+
+		> .column {
+			text-align: right;
+		}
+	}
+
+	@for $i from 0 through 10 {
+		$variable-size: #{$i * 0.25rem};
+
+		&--padding-#{$i} {
+			margin-right: calc(#{$variable-size} * -1);
+			margin-left: calc(#{$variable-size} * -1);
 
 			> .column {
-				text-align: left;
+				padding-left: $variable-size;
+				padding-right: $variable-size;
 			}
 		}
 
-		&--halign-center {
-			justify-content: center;
-
-			> .column {
-				text-align: center;
-			}
-		}
-
-		&--halign-right {
-			justify-content: flex-end;
-
-			> .column {
-				text-align: right;
-			}
-		}
-
-		@for $i from 0 through 10 {
-			$variable-size: #{$i * 0.25rem};
-
-			&--padding-#{$i} {
-				margin-right: calc(#{$variable-size} * -1);
-				margin-left: calc(#{$variable-size} * -1);
-
-				> .column {
-					padding-left: $variable-size;
-					padding-right: $variable-size;
-				}
-			}
-
-			&--margin-#{$i} {
-				margin-top: $variable-size;
-				margin-bottom: $variable-size;
-			}
+		&--margin-#{$i} {
+			margin-top: $variable-size;
+			margin-bottom: $variable-size;
 		}
 	}
 }
