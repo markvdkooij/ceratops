@@ -10,6 +10,10 @@
 	&--neat {
 		> *:last-child {
 			margin-bottom: 0;
+
+			&.button-group {
+				margin-bottom: -#{$margin};
+			}
 		}
 
 		> .flex:last-child {

@@ -133,16 +133,22 @@
 }
 
 .button-group {
-	margin-bottom: $margin;
+	margin-bottom: #{$margin / 2};
 
 	.button {
-		margin-right: #{$margin / 2};
-		margin-bottom: #{$margin / 2};
+		margin: 0 $margin $margin 0;
 	}
 
-	a {
+	a:not(.button) {
 		display: inline-block;
-		margin-left: #{$margin / 2};
-		margin-right: $margin;
+		margin: 0 $margin $margin 0;
+	}
+
+	> *:first-child {
+		margin-left: 0;
+	}
+
+	> *:last-child {
+		margin-right: 0;
 	}
 }
