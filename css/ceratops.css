@@ -1,4 +1,4 @@
-/*! ceratops v0.3.6 | MIT License | github.com/markvdkooij/ceratops */
+/*! ceratops v0.3.7 | MIT License | github.com/markvdkooij/ceratops */
 * {
   margin: 0;
   padding: 0;
@@ -1006,19 +1006,19 @@ dl dd {
      -moz-appearance: none;
           appearance: none;
   color: #2a2a2a;
-  background-color: #ebebeb;
+  background-color: transparent;
   border-color: #ebebeb; }
   .button:visited {
     color: #2a2a2a;
-    background-color: #ebebeb;
+    background-color: transparent;
     border-color: #ebebeb; }
   .button:hover {
     color: #2a2a2a;
-    background-color: #dedede;
+    background-color: rgba(0, 0, 0, 0);
     border-color: #dedede; }
   .button:active, .button:focus {
     color: #2a2a2a;
-    background-color: #d2d2d2;
+    background-color: rgba(0, 0, 0, 0);
     border-color: #d2d2d2; }
   .button--primary {
     color: #fff;

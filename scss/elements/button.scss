@@ -81,7 +81,7 @@
 	cursor: pointer;
 	appearance: none;
 
-	@include button-style-regular($color-body, $color-fill, $color-fill);
+	@include button-style-regular($color-body, transparent, $color-fill);
 
 	&--primary {
 		@include button-style-regular(#fff, $color-primary, $color-primary);
