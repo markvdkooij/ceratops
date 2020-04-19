@@ -1,4 +1,4 @@
-/*! ceratops v0.3.7 | MIT License | github.com/markvdkooij/ceratops */
+/*! ceratops v0.3.8 | MIT License | github.com/markvdkooij/ceratops */
 * {
   margin: 0;
   padding: 0;
@@ -1210,7 +1210,7 @@ table {
   .input--error {
     border-color: #d53a3a;
     box-shadow: 0 2px 0 #d53a3a; }
-  .input + .alert {
+  .input + .alert--inline {
     margin-top: -0.75rem; }
 
 .textarea {
@@ -1244,6 +1244,8 @@ table {
   .textarea--error {
     border-color: #d53a3a;
     box-shadow: 0 2px 0 #d53a3a; }
+  .textarea + .alert--inline {
+    margin-top: -0.75rem; }
   .textarea--large {
     min-height: 384px; }
 
@@ -1277,6 +1279,8 @@ table {
   .select--error {
     border-color: #d53a3a;
     box-shadow: 0 2px 0 #d53a3a; }
+  .select + .alert--inline {
+    margin-top: -0.75rem; }
   .select[multiple] {
     padding: 0; }
     .select[multiple] option {

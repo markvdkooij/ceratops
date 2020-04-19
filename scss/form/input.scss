@@ -43,14 +43,14 @@
 		border-color: $color-error;
 		box-shadow: $shadow-opt $color-error;
 	}
+
+	& + .alert--inline {
+		margin-top: -#{$margin * 0.75};
+	}
 }
 
 .input {
 	@include input();
-
-	& + .alert {
-		margin-top: -#{$margin * 0.75};
-	}
 }
 
 .textarea {
