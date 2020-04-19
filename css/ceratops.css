@@ -1,4 +1,4 @@
-/*! ceratops v0.3.4 | MIT License | github.com/markvdkooij/ceratops */
+/*! ceratops v0.3.6 | MIT License | github.com/markvdkooij/ceratops */
 * {
   margin: 0;
   padding: 0;
@@ -944,6 +944,9 @@ dl dd {
   border: 1px solid #ebebeb;
   border-radius: 3px;
   box-shadow: 0 2px 0 #ebebeb;
+  --color-background: #ffffff;
+  --color-border: #2a2a2a;
+  --shadow: 0 2px 0 #2a2a2a;
   background-color: var(--color-background);
   border-color: var(--color-border);
   box-shadow: var(--shadow); }
@@ -961,7 +964,7 @@ dl dd {
     --shadow: 0 2px 0 #d53a3a; }
   .alert--inline {
     padding: 0;
-    background-color: #ffffff;
+    background-color: transparent;
     border: none;
     box-shadow: none;
     color: var(--color-border); }
@@ -975,6 +978,8 @@ dl dd {
   box-shadow: 0 2px 0 #ebebeb; }
   .box--neat > *:last-child {
     margin-bottom: 0; }
+    .box--neat > *:last-child.button-group {
+      margin-bottom: -1rem; }
   .box--neat > .flex:last-child .column > *:last-child {
     margin-bottom: 0; }
 
@@ -1140,14 +1145,16 @@ dl dd {
       border-right-color: transparent; }
 
 .button-group {
-  margin-bottom: 1rem; }
+  margin-bottom: 0.5rem; }
   .button-group .button {
-    margin-right: 0.5rem;
-    margin-bottom: 0.5rem; }
-  .button-group a {
+    margin: 0 1rem 1rem 0; }
+  .button-group a:not(.button) {
     display: inline-block;
-    margin-left: 0.5rem;
-    margin-right: 1rem; }
+    margin: 0 1rem 1rem 0; }
+  .button-group > *:first-child {
+    margin-left: 0; }
+  .button-group > *:last-child {
+    margin-right: 0; }
 
 table {
   box-shadow: 0 2px 0 #ebebeb; }
@@ -1192,6 +1199,8 @@ table {
      -moz-appearance: none;
           appearance: none;
   text-indent: 0; }
+  .input:disabled, .input[disabled], .input[readonly] {
+    background-color: #ebebeb; }
   .input:focus, .input--focus {
     border-color: #297abf;
     box-shadow: 0 2px 0 #297abf; }
@@ -1223,7 +1232,9 @@ table {
      -moz-appearance: none;
           appearance: none;
   text-indent: 0;
-  min-height: 120px; }
+  min-height: 128px; }
+  .textarea:disabled, .textarea[disabled], .textarea[readonly] {
+    background-color: #ebebeb; }
   .textarea:focus, .textarea--focus {
     border-color: #297abf;
     box-shadow: 0 2px 0 #297abf; }
@@ -1233,6 +1244,8 @@ table {
   .textarea--error {
     border-color: #d53a3a;
     box-shadow: 0 2px 0 #d53a3a; }
+  .textarea--large {
+    min-height: 384px; }
 
 .select {
   display: block;
@@ -1253,6 +1266,8 @@ table {
      -moz-appearance: none;
           appearance: none;
   text-indent: 0; }
+  .select:disabled, .select[disabled], .select[readonly] {
+    background-color: #ebebeb; }
   .select:focus, .select--focus {
     border-color: #297abf;
     box-shadow: 0 2px 0 #297abf; }
@@ -1397,6 +1412,52 @@ label {
     transform: rotate(0deg); }
   100% {
     transform: rotate(360deg); } }
+
+.skeleton {
+  position: relative;
+  margin-bottom: 1rem;
+  background-color: #f2f2f2;
+  border: 1px solid #ebebeb;
+  border-radius: 3px;
+  box-shadow: 0 2px 0 #ebebeb;
+  overflow: hidden; }
+  .skeleton:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -25vw;
+    width: 25vw;
+    height: inherit;
+    background: #f2f2f2;
+    background: linear-gradient(90deg, #f2f2f2 0%, #f9f9f9 35%, #f9f9f9 65%, #f2f2f2 100%);
+    -webkit-animation: skeleton-shine 1s linear infinite;
+            animation: skeleton-shine 1s linear infinite; }
+
+@-webkit-keyframes skeleton-shine {
+  0% {
+    opacity: 1;
+    left: -25vw; }
+  70% {
+    opacity: 1;
+    left: calc(100% + 25vw); }
+  75% {
+    opacity: 0; }
+  100% {
+    opacity: 0;
+    left: -25vw; } }
+
+@keyframes skeleton-shine {
+  0% {
+    opacity: 1;
+    left: -25vw; }
+  70% {
+    opacity: 1;
+    left: calc(100% + 25vw); }
+  75% {
+    opacity: 0; }
+  100% {
+    opacity: 0;
+    left: -25vw; } }
 
 .cm-color-primary {
   color: #ba403f;

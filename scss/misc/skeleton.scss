@@ -1,0 +1,51 @@
+$size: 25vw;
+
+.skeleton {
+	position: relative;
+	margin-bottom: $margin;
+
+	background-color: $color-skeleton;
+	border: $border;
+	border-radius: $radius;
+	box-shadow: $shadow;
+
+	overflow: hidden;
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: -#{$size};
+		width: #{$size};
+		height: inherit;
+
+		background: rgb(242, 242, 242);
+		background: linear-gradient(
+			90deg,
+			rgba(242, 242, 242, 1) 0%,
+			rgba(249, 249, 249, 1) 35%,
+			rgba(249, 249, 249, 1) 65%,
+			rgba(242, 242, 242, 1) 100%
+		);
+
+		animation: skeleton-shine 1s linear infinite;
+	}
+}
+
+@keyframes skeleton-shine {
+	0% {
+		opacity: 1;
+		left: -#{$size};
+	}
+	70% {
+		opacity: 1;
+		left: calc(100% + #{$size});
+	}
+	75% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+		left: -#{$size};
+	}
+}

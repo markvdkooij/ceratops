@@ -22,6 +22,12 @@
 	appearance: none;
 	text-indent: 0;
 
+	&:disabled,
+	&[disabled],
+	&[readonly] {
+		background-color: $color-fill;
+	}
+
 	&:focus,
 	&--focus {
 		border-color: $color-focus;
@@ -50,7 +56,11 @@
 .textarea {
 	@include input();
 
-	min-height: 120px;
+	min-height: #{$body-font-size * 8};
+
+	&--large {
+		min-height: #{$body-font-size * 24};
+	}
 }
 
 .select {
