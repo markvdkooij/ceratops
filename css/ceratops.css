@@ -1,4 +1,4 @@
-/*! ceratops v0.3.9 | MIT License | github.com/markvdkooij/ceratops */
+/*! ceratops v0.3.10 | MIT License | github.com/markvdkooij/ceratops */
 * {
   margin: 0;
   padding: 0;
@@ -555,7 +555,7 @@ dl dd {
   color: #2a2a2a;
   background-color: transparent;
   border-color: #ebebeb; }
-  .button:visited {
+  .button:visited, .button:focus:not(:active) {
     color: #2a2a2a;
     background-color: transparent;
     border-color: #ebebeb; }
@@ -563,7 +563,7 @@ dl dd {
     color: #2a2a2a;
     background-color: rgba(0, 0, 0, 0);
     border-color: #dedede; }
-  .button:active, .button:focus {
+  .button:active {
     color: #2a2a2a;
     background-color: rgba(0, 0, 0, 0);
     border-color: #d2d2d2; }
@@ -571,7 +571,7 @@ dl dd {
     color: #fff;
     background-color: #ba403f;
     border-color: #ba403f; }
-    .button--primary:visited {
+    .button--primary:visited, .button--primary:focus:not(:active) {
       color: #fff;
       background-color: #ba403f;
       border-color: #ba403f; }
@@ -579,7 +579,7 @@ dl dd {
       color: #fff;
       background-color: #a73939;
       border-color: #a73939; }
-    .button--primary:active, .button--primary:focus {
+    .button--primary:active {
       color: #fff;
       background-color: #943332;
       border-color: #943332; }
@@ -588,7 +588,7 @@ dl dd {
       background-color: #fff;
       border-color: #ba403f;
       box-shadow: 0 2px 0 #ba403f; }
-      .button--primary--inverted:visited {
+      .button--primary--inverted:visited, .button--primary--inverted:focus:not(:active) {
         color: #ba403f;
         background-color: #fff;
         border-color: #ba403f; }
@@ -596,7 +596,7 @@ dl dd {
         color: #ba403f;
         background-color: #f7f7f7;
         border-color: #ba403f; }
-      .button--primary--inverted:active, .button--primary--inverted:focus {
+      .button--primary--inverted:active {
         color: #ba403f;
         background-color: #f0f0f0;
         border-color: #ba403f; }
@@ -604,7 +604,7 @@ dl dd {
     color: #fff;
     background-color: #3c887e;
     border-color: #3c887e; }
-    .button--secondary:visited {
+    .button--secondary:visited, .button--secondary:focus:not(:active) {
       color: #fff;
       background-color: #3c887e;
       border-color: #3c887e; }
@@ -612,7 +612,7 @@ dl dd {
       color: #fff;
       background-color: #34766e;
       border-color: #34766e; }
-    .button--secondary:active, .button--secondary:focus {
+    .button--secondary:active {
       color: #fff;
       background-color: #2c655d;
       border-color: #2c655d; }
@@ -621,7 +621,7 @@ dl dd {
       background-color: #fff;
       border-color: #3c887e;
       box-shadow: 0 2px 0 #3c887e; }
-      .button--secondary--inverted:visited {
+      .button--secondary--inverted:visited, .button--secondary--inverted:focus:not(:active) {
         color: #3c887e;
         background-color: #fff;
         border-color: #3c887e; }
@@ -629,7 +629,7 @@ dl dd {
         color: #3c887e;
         background-color: #f7f7f7;
         border-color: #3c887e; }
-      .button--secondary--inverted:active, .button--secondary--inverted:focus {
+      .button--secondary--inverted:active {
         color: #3c887e;
         background-color: #f0f0f0;
         border-color: #3c887e; }
@@ -637,7 +637,7 @@ dl dd {
     color: #fff;
     background-color: #3f89ba;
     border-color: #3f89ba; }
-    .button--tertiary:visited {
+    .button--tertiary:visited, .button--tertiary:focus:not(:active) {
       color: #fff;
       background-color: #3f89ba;
       border-color: #3f89ba; }
@@ -645,7 +645,7 @@ dl dd {
       color: #fff;
       background-color: #397ba7;
       border-color: #397ba7; }
-    .button--tertiary:active, .button--tertiary:focus {
+    .button--tertiary:active {
       color: #fff;
       background-color: #326d94;
       border-color: #326d94; }
@@ -654,7 +654,7 @@ dl dd {
       background-color: #fff;
       border-color: #3f89ba;
       box-shadow: 0 2px 0 #3f89ba; }
-      .button--tertiary--inverted:visited {
+      .button--tertiary--inverted:visited, .button--tertiary--inverted:focus:not(:active) {
         color: #3f89ba;
         background-color: #fff;
         border-color: #3f89ba; }
@@ -662,7 +662,7 @@ dl dd {
         color: #3f89ba;
         background-color: #f7f7f7;
         border-color: #3f89ba; }
-      .button--tertiary--inverted:active, .button--tertiary--inverted:focus {
+      .button--tertiary--inverted:active {
         color: #3f89ba;
         background-color: #f0f0f0;
         border-color: #3f89ba; }

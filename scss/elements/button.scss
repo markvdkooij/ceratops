@@ -5,7 +5,8 @@
 	background-color: $color-background;
 	border-color: $color-border;
 
-	&:visited {
+	&:visited,
+	&:focus:not(:active) {
 		color: $color-text;
 		background-color: $color-background;
 		border-color: $color-border;
@@ -17,8 +18,7 @@
 		border-color: darken($color-border, 5);
 	}
 
-	&:active,
-	&:focus {
+	&:active {
 		color: $color-text;
 		background-color: darken($color-background, 10);
 		border-color: darken($color-border, 10);
@@ -31,7 +31,8 @@
 	border-color: $color-border;
 	box-shadow: $shadow-opt $color-border;
 
-	&:visited {
+	&:visited,
+	&:focus:not(:active) {
 		color: $color-background;
 		background-color: $color-text;
 		border-color: $color-border;
@@ -43,8 +44,7 @@
 		border-color: $color-border;
 	}
 
-	&:active,
-	&:focus {
+	&:active {
 		color: $color-background;
 		background-color: darken($color-text, 6);
 		border-color: $color-border;
