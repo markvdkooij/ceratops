@@ -1,4 +1,4 @@
-/*! ceratops v0.3.10 | MIT License | github.com/markvdkooij/ceratops */
+/*! ceratops v0.3.11 | MIT License | github.com/markvdkooij/ceratops */
 * {
   margin: 0;
   padding: 0;
@@ -738,6 +738,7 @@ table {
   font-weight: 400;
   font-family: Arial, Helvetica, sans-serif;
   text-align: left;
+  background-color: #ffffff;
   border: 1px solid #ebebeb;
   border-color: #dedede;
   box-shadow: 0 2px 0 #ebebeb;
@@ -771,6 +772,7 @@ table {
   font-weight: 400;
   font-family: Arial, Helvetica, sans-serif;
   text-align: left;
+  background-color: #ffffff;
   border: 1px solid #ebebeb;
   border-color: #dedede;
   box-shadow: 0 2px 0 #ebebeb;
@@ -807,6 +809,7 @@ table {
   font-weight: 400;
   font-family: Arial, Helvetica, sans-serif;
   text-align: left;
+  background-color: #ffffff;
   border: 1px solid #ebebeb;
   border-color: #dedede;
   box-shadow: 0 2px 0 #ebebeb;
