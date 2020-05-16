@@ -3,10 +3,6 @@
 @mixin anchor-style-regular($color-text) {
 	color: $color-text;
 
-	&:visited {
-		color: $color-text;
-	}
-
 	&:hover {
 		color: darken($color-text, 10);
 	}
