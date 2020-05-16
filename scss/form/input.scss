@@ -84,17 +84,20 @@
 
 		content: '';
 
+		display: inline-block;
+
 		position: absolute;
 		top: calc(50% - #{$size * 2});
 		right: 1rem;
 
-		border: solid $color-body;
-		border-width: 0 2px 2px 0;
-		display: inline-block;
 		padding: $size;
 
+		border: solid $color-body;
+		border-width: 0 2px 2px 0;
+
 		transform: rotate(45deg);
-		-webkit-transform: rotate(45deg);
+
+		pointer-events: none;
 	}
 
 	.select {

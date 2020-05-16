@@ -1,4 +1,4 @@
-/*! ceratops v0.4.0 | MIT License | github.com/markvdkooij/ceratops */
+/*! ceratops v0.4.1 | MIT License | github.com/markvdkooij/ceratops */
 * {
   margin: 0;
   padding: 0;
@@ -835,15 +835,15 @@ table {
   position: relative; }
   .select-wrapper:after {
     content: '';
+    display: inline-block;
     position: absolute;
     top: calc(50% - 8px);
     right: 1rem;
+    padding: 4px;
     border: solid #2a2a2a;
     border-width: 0 2px 2px 0;
-    display: inline-block;
-    padding: 4px;
     transform: rotate(45deg);
-    -webkit-transform: rotate(45deg); }
+    pointer-events: none; }
   .select-wrapper .select {
     padding-right: 2.5rem; }
 
