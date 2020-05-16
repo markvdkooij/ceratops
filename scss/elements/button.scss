@@ -29,7 +29,7 @@
 	color: $color-background;
 	background-color: $color-text;
 	border-color: $color-border;
-	box-shadow: $shadow-opt $color-border;
+	box-shadow: none;
 
 	&:visited,
 	&:focus:not(:active) {
@@ -54,7 +54,9 @@
 // button
 
 .button {
-	--padding-vertices: calc(#{$padding / 2} - 1px);
+	$border-width: 2px;
+
+	--padding-vertices: calc(#{$padding / 2} - #{$border-width});
 	--padding-sides: #{$padding};
 
 	display: inline-block;
@@ -74,12 +76,16 @@
 	vertical-align: baseline;
 
 	outline: none;
-	border: 1px solid transparent;
+	border: $border-width solid transparent;
 	border-radius: $radius;
 
 	white-space: pre;
 	cursor: pointer;
 	appearance: none;
+
+	&::-moz-focus-inner {
+		border: 0;
+	}
 
 	@include button-style-regular($color-body, transparent, $color-fill);
 
@@ -136,12 +142,12 @@
 	margin-bottom: #{$margin / 2};
 
 	.button {
-		margin: 0 $margin $margin 0;
+		margin: 0 #{$margin / 2} #{$margin / 2} 0;
 	}
 
 	a:not(.button) {
 		display: inline-block;
-		margin: 0 $margin $margin 0;
+		margin: 0 #{$margin / 2} #{$margin / 2} 0;
 	}
 
 	> *:first-child {

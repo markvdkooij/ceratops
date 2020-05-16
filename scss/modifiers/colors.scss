@@ -10,6 +10,15 @@ $mod-colors: (
 	.#{$mod-prefix}-color-#{$label} {
 		color: #{$value};
 		border-color: #{$value};
+
+		&:hover {
+			color: darken($value, 10);
+		}
+
+		&:active,
+		&:focus {
+			color: darken($value, 20);
+		}
 	}
 
 	.#{$mod-prefix}-background-color-#{$label} {
