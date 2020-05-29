@@ -9,21 +9,21 @@
 	margin-right: -$column-gap;
 	margin-left: -$column-gap;
 
-	@media screen and (min-width: $tablet-portrait) {
+	@include min($tablet) {
 		display: flex;
 	}
-}
 
-.flex > .column {
-	display: block;
+	> .column {
+		display: block;
 
-	padding-right: $column-gap;
-	padding-left: $column-gap;
+		padding-right: $column-gap;
+		padding-left: $column-gap;
 
-	@media screen and (min-width: $tablet-portrait) {
-		flex-basis: 0;
-		flex-grow: 1;
-		flex-shrink: 1;
+		@include min($tablet) {
+			flex-basis: 0;
+			flex-grow: 1;
+			flex-shrink: 1;
+		}
 	}
 }
 
@@ -87,7 +87,7 @@
 }
 
 .flex > .column {
-	@media screen and (min-width: $tablet-portrait) {
+	@include min($tablet) {
 		@for $i from 1 through 12 {
 			&--size-#{$i} {
 				flex: none;

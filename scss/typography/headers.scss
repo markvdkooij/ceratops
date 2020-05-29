@@ -6,47 +6,20 @@
 	color: $color-header;
 }
 
-h1,
-.#{$mod-prefix}-h1,
-h2,
-.#{$mod-prefix}-h2,
-h3,
-.#{$mod-prefix}-h3,
-h4,
-.#{$mod-prefix}-h4,
-h5,
-.#{$mod-prefix}-h5,
-h6,
-.#{$mod-prefix}-h6 {
-	@include header();
-}
+$headers: (
+	h1: $header-h1-font-size,
+	h2: $header-h2-font-size,
+	h3: $header-h3-font-size,
+	h4: $header-h4-font-size,
+	h5: $header-h5-font-size,
+	h6: $header-h6-font-size,
+);
 
-h1,
-.#{$mod-prefix}-h1 {
-	font-size: $header-h1-font-size;
-}
+@each $header, $font-size in $headers {
+	#{$header},
+	.#{$mod-prefix}-#{$header} {
+		@include header();
 
-h2,
-.#{$mod-prefix}-h2 {
-	font-size: $header-h2-font-size;
-}
-
-h3,
-.#{$mod-prefix}-h3 {
-	font-size: $header-h3-font-size;
-}
-
-h4,
-.#{$mod-prefix}-h4 {
-	font-size: $header-h4-font-size;
-}
-
-h5,
-.#{$mod-prefix}-h5 {
-	font-size: $header-h5-font-size;
-}
-
-h6,
-.#{$mod-prefix}-h6 {
-	font-size: $header-h6-font-size;
+		font-size: $font-size;
+	}
 }

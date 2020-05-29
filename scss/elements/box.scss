@@ -1,11 +1,10 @@
 .box {
+	@include frame();
+
 	margin-bottom: $margin;
 	padding: $padding #{$padding * 1.25};
 
 	background-color: $color-background;
-	border: $border;
-	border-radius: $radius;
-	box-shadow: $shadow;
 
 	&--neat {
 		> *:last-child {

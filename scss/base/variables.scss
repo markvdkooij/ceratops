@@ -34,29 +34,29 @@ $color-html: #f9f9f9 !default;
 $color-skeleton: #f2f2f2 !default;
 
 $color-primary: #ba403f !default;
-$color-secondary: #3c887e !default;
+$color-secondary: #459b90 !default;
 $color-tertiary: #3f89ba !default;
 
-$color-fill: #ebebeb !default;
-$color-border: #ebebeb !default;
-$color-border-dark: darken(#ebebeb, 5) !default;
-$color-shadow: #ebebeb !default;
+$color-fill: #dedede !default;
+$color-border: #dedede !default;
+$color-shadow: #dedede !default;
 
-$color-focus: #297abf !default;
-$color-focus-light: lighten($color-focus, 50) !default;
+$color-focus: #3f89ba !default;
+$color-focus-light: lighten($color-focus, 45) !default;
 
-$color-success: #29a258 !default;
-$color-success-light: lighten($color-success, 55) !default;
+$color-success: #459b90 !default;
+$color-success-light: lighten($color-success, 45) !default;
 
-$color-error: #d53a3a !default;
-$color-error-light: lighten($color-error, 42) !default;
+$color-error: #ba403f !default;
+$color-error-light: lighten($color-error, 45) !default;
 
 // box
 
-$radius: 3px !default;
-$border: 1px solid $color-border !default;
-$shadow: 0 2px 0 $color-shadow !default;
+$border-width: 1px;
+$radius: 4px !default;
+$border: $border-width solid $color-border !default;
 $shadow-opt: 0 2px 0 !default;
+$shadow: $shadow-opt $color-shadow !default;
 
 // modifiers
 
@@ -64,17 +64,7 @@ $mod-prefix: cm !default;
 
 // media queries
 
-$desktop: 1201px !default; // on desktop or larger (min-width)
-$desktop-max: 1200px !default; // on desktop or smaller (max-width)
-
-$tablet-landscape: 1025px !default; // on tablet landscape or larger (min-width)
-$tablet-landscape-max: 1024px !default; // on tablet landscape or smaller (max-width)
-
-$tablet-portrait: 769px !default; // on tablet portrait or larger (min-width)
-$tablet-portrait-max: 768px !default; // on tablet portrait or smaller (max-width)
-
-$phone-landscape: 681px !default; // on phone landscape or larger (min-width)
-$phone-landscape-max: 680px !default; // on phone landscape or smaller (max-width)
-
-$phone-portrait: 481px !default; // on phone portait or larger (min-width)
-$phone-portrait-max: 480px !default; // on phone portait or smaller (max-width)
+$widescreen: 1200px !default;
+$desktop: 1024px !default;
+$tablet: 768px !default;
+$phone: 480px !default;

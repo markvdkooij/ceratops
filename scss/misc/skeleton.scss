@@ -1,13 +1,12 @@
 $size: 25vw;
 
 .skeleton {
+	@include frame();
+
 	position: relative;
 	margin-bottom: $margin;
 
 	background-color: $color-skeleton;
-	border: $border;
-	border-radius: $radius;
-	box-shadow: $shadow;
 
 	overflow: hidden;
 
@@ -19,13 +18,13 @@ $size: 25vw;
 		width: #{$size};
 		height: inherit;
 
-		background: rgb(242, 242, 242);
+		background: $color-skeleton;
 		background: linear-gradient(
 			90deg,
-			rgba(242, 242, 242, 1) 0%,
-			rgba(249, 249, 249, 1) 35%,
-			rgba(249, 249, 249, 1) 65%,
-			rgba(242, 242, 242, 1) 100%
+			rgba($color-skeleton, 0%),
+			rgba(lighten($color-skeleton, 4), 35%),
+			rgba(lighten($color-skeleton, 4), 65%),
+			rgba($color-skeleton, 100%)
 		);
 
 		animation: skeleton-shine 1s linear infinite;

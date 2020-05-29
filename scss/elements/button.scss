@@ -25,28 +25,27 @@
 	}
 }
 
-@mixin button-style-inverted($color-text, $color-background, $color-border) {
-	color: $color-background;
-	background-color: $color-text;
+@mixin button-style-inverted($color-text, $color-background, $color-border, $multiplier-hover, $multiplier-active) {
+	color: $color-text;
+	background-color: $color-background;
 	border-color: $color-border;
-	box-shadow: none;
 
 	&:visited,
 	&:focus:not(:active) {
-		color: $color-background;
-		background-color: $color-text;
+		color: $color-text;
+		background-color: $color-background;
 		border-color: $color-border;
 	}
 
 	&:hover {
-		color: $color-background;
-		background-color: darken($color-text, 3);
+		color: $color-text;
+		background-color: lighten($color-text, $multiplier-hover);
 		border-color: $color-border;
 	}
 
 	&:active {
-		color: $color-background;
-		background-color: darken($color-text, 6);
+		color: $color-text;
+		background-color: lighten($color-text, $multiplier-active);
 		border-color: $color-border;
 	}
 }
@@ -54,10 +53,10 @@
 // button
 
 .button {
-	$border-width: 2px;
-
-	--padding-vertices: calc(#{$padding / 2} - #{$border-width});
+	--padding-vertices: calc(#{$padding * 0.5} - #{$border-width});
 	--padding-sides: #{$padding};
+
+	@include frame();
 
 	display: inline-block;
 
@@ -76,8 +75,7 @@
 	vertical-align: baseline;
 
 	outline: none;
-	border: $border-width solid transparent;
-	border-radius: $radius;
+	border-color: transparent;
 
 	white-space: pre;
 	cursor: pointer;
@@ -91,26 +89,26 @@
 
 	&--primary {
 		@include button-style-regular(#fff, $color-primary, $color-primary);
+	}
 
-		&--inverted {
-			@include button-style-inverted(#fff, $color-primary, $color-primary);
-		}
+	&--primary#{&}--inverted {
+		@include button-style-inverted($color-primary, #fff, $color-primary, 50, 45);
 	}
 
 	&--secondary {
 		@include button-style-regular(#fff, $color-secondary, $color-secondary);
+	}
 
-		&--inverted {
-			@include button-style-inverted(#fff, $color-secondary, $color-secondary);
-		}
+	&--secondary#{&}--inverted {
+		@include button-style-inverted($color-secondary, #fff, $color-secondary, 50, 45);
 	}
 
 	&--tertiary {
 		@include button-style-regular(#fff, $color-tertiary, $color-tertiary);
+	}
 
-		&--inverted {
-			@include button-style-inverted(#fff, $color-tertiary, $color-tertiary);
-		}
+	&--tertiary#{&}--inverted {
+		@include button-style-inverted($color-tertiary, #fff, $color-tertiary, 50, 45);
 	}
 
 	&:disabled,
@@ -135,6 +133,20 @@
 			border-color: #fff;
 			border-right-color: transparent;
 		}
+	}
+
+	&--small {
+		--padding-vertices: calc(#{$padding * 0.33} - #{$border-width});
+		--padding-sides: #{$padding};
+
+		font-size: 0.9em;
+	}
+
+	&--large {
+		--padding-vertices: calc(#{$padding * 0.66} - #{$border-width});
+		--padding-sides: #{$padding * 1.33};
+
+		font-size: 1.2em;
 	}
 }
 

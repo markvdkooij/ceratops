@@ -1,0 +1,18 @@
+.section {
+	--multiplier: 1;
+	--padding: #{$padding / 2};
+
+	@include min($desktop) {
+		--multiplier: 2;
+	}
+
+	padding: calc(var(--padding) * var(--multiplier)) 0;
+
+	&:first-of-type {
+		padding-top: calc(var(--padding) * var(--multiplier) * 2);
+	}
+
+	&:last-of-type {
+		padding-bottom: calc(var(--padding) * var(--multiplier) * 2);
+	}
+}
