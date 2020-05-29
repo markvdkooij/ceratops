@@ -1,4 +1,6 @@
 @mixin input() {
+	@include frame();
+
 	display: block;
 
 	width: 100%;
@@ -15,10 +17,6 @@
 	text-align: left;
 
 	background-color: $color-background;
-	border: $border;
-	border-color: $color-border-dark;
-	box-shadow: $shadow;
-	border-radius: $radius;
 
 	appearance: none;
 	text-indent: 0;
@@ -46,7 +44,7 @@
 	}
 
 	& + .alert--inline {
-		margin-top: -#{$margin * 0.5};
+		margin-top: -#{$margin * 0.75};
 	}
 }
 

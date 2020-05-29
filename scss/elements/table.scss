@@ -1,5 +1,5 @@
 table {
-	box-shadow: $shadow;
+	@include frame();
 
 	tr {
 		th,

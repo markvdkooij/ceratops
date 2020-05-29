@@ -1,18 +1,17 @@
 .container {
 	position: relative;
-	margin: 0 auto;
+	margin: 0 $margin;
 	width: auto;
 
-	@media screen and (max-width: $tablet-landscape-max) {
-		margin-right: $margin;
-		margin-left: $margin;
+	@include min($tablet) {
+		margin: 0 auto;
 	}
 
-	@media screen and (min-width: $tablet-landscape) {
+	@include min($desktop) {
 		max-width: 960px;
 	}
 
-	@media screen and (min-width: $desktop) {
+	@include min($widescreen) {
 		max-width: 1140px;
 	}
 }

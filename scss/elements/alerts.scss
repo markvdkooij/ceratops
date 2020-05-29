@@ -1,11 +1,10 @@
 .alert {
+	@include frame();
+
 	margin-bottom: $margin;
 	padding: #{$padding / 2} $padding;
 
 	background-color: $color-background;
-	border: $border;
-	border-radius: $radius;
-	box-shadow: $shadow;
 
 	--color-background: #{$color-background};
 	--color-border: #{$color-body};

@@ -1,19 +1,9 @@
-@mixin block() {
-	margin-bottom: $margin;
-	padding: $padding #{$padding * 1.25};
-
-	background-color: $color-background;
-	border: $border;
-	border-radius: $radius;
-	box-shadow: $shadow;
-}
-
 blockquote {
-	@include block();
+	@include box();
 }
 
 pre {
-	@include block();
+	@include box();
 
 	overflow: auto;
 	white-space: pre;
@@ -21,19 +11,16 @@ pre {
 }
 
 code {
-	@include block();
+	@include box();
 
 	font-family: monospace;
 }
 
 output {
-	@include block();
+	@include box();
 }
 
 hr {
-	height: 1px;
-
-	background-color: $color-fill;
 	border: none;
-	box-shadow: $shadow;
+	border-top: $border-width solid $color-border;
 }

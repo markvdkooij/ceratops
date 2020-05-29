@@ -1,8 +1,8 @@
+$mod-directions: top, right, bottom, left;
 $mod-spacers: (
 	margin: $margin,
 	padding: $padding,
 );
-$mod-directions: top, right, bottom, left;
 
 @each $mod-spacer, $mod-value in $mod-spacers {
 	.#{$mod-prefix}-#{$mod-spacer} {

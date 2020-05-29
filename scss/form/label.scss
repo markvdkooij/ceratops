@@ -8,33 +8,37 @@
 	&--inline {
 		margin-bottom: $margin;
 
-		@media screen and (min-width: $tablet-portrait) {
+		@include min($tablet) {
 			display: flex;
 			align-items: center;
 			flex-wrap: wrap;
 		}
 
 		label {
-			@media screen and (min-width: $tablet-portrait) {
-				min-width: 200px;
-				width: 25%;
+			width: 100%;
+
+			@include min($tablet) {
+				width: 20%;
 				margin: 0;
+				padding-right: $padding;
+				text-align: right;
 			}
 		}
 
 		.input,
 		.textarea,
 		.select {
+			width: 100%;
 			margin: 0;
 
-			@media screen and (min-width: $tablet-portrait) {
-				width: 75%;
+			@include min($tablet) {
+				width: 80%;
 			}
 		}
 
 		.alert {
 			display: block;
-			flex: 1 1 auto;
+			flex: 1 1 100%;
 			margin: $margin 0 0;
 		}
 	}
